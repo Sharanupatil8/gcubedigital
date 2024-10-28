@@ -1,15 +1,18 @@
-import localFont from "next/font/local";
+import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./_components/Navbar";
+import Hero from "./_components/Hero";
+import { Providers as ThemeProvider } from "./_context/ThemeContext";
+import AnimatedCursor from "react-animated-cursor";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Initialize Plus Jakarta Sans with the required subset
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+// Initialize DM Sans with the required subset
+const dmSans = DM_Sans({
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -19,11 +22,37 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jakarta.className} ${dmSans.className} dark:bg-gray-900 bg-gray-50 overflow-x-hidden`}
       >
-        {children}
+        <AnimatedCursor
+          innerSize={12}
+          outerSize={48}
+          color="2, 132, 233" // White color for cursor
+          outerAlpha={0.5}
+          innerScale={0.3}
+          outerScale={2}
+          style={{
+            mixBlendMode: "difference", // Apply difference blend mode
+          }}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            ".link",
+          ]}
+        />
+        <ThemeProvider>
+          <>{children}</>
+        </ThemeProvider>
       </body>
     </html>
   );

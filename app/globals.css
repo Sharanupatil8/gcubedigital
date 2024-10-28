@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.hero-bg,
+.testimonial-bg {
+  background-image: url("/assets/light-gradient.jpg"); /* Default light mode background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative; /* Make sure the parent has a position set */
+  z-index: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-pattern {
+  background-image: url("/assets/pattern-service.png"); /* Default light mode background */
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative; /* Make sure the parent has a position set */
+  z-index: 1;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.dark .hero-bg,
+.dark .testimonial-bg {
+  background-image: url("/assets/dark-gradient.jpg"); /* Dark mode background */
+  background-position: center, bottom;
 }
 
+.hero-bg::before {
+  content: ""; /* Use a semicolon instead of a comma */
+  position: absolute; /* Positioning the pseudo-element absolutely */
+  top: 0; /* Cover the entire area */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/assets/intro-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.05;
+  z-index: 0;
+  height: 100%;
+}
+
+.dark .hero-bg::before {
+  opacity: 0.6;
+}
+.btn-primary {
+  @apply bg-sky-600 dark:text-gray-100 text-gray-100 font-medium px-4 py-3 text-xl hover:scale-105 hover:shadow-green-500 drop-shadow-lg ease-linear duration-100;
+}
+
+/* Custom utility class for balanced text wrapping */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.line-height-heading {
+  line-height: 1.05 !important;
+}
+
+.text-truncate {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.preloader {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.preloader::after {
+  content: "";
+  width: 100%; /* Start with full width */
+  height: 100vh; /* Full viewport height */
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: animatedhero 2s ease-out forwards;
+  z-index: 100; /* Slide-out effect */
+}
+
+@keyframes animatedhero {
+  0% {
+    width: 100%; /* Start with 100% width */
+    height: 100%;
+  }
+  100% {
+    width: 0%; /* Shrink to 0% width */
+    height: 100%;
   }
 }
