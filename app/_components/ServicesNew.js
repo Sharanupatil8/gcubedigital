@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import {
   motion,
@@ -7,7 +7,7 @@ import {
   useTransform,
   useMotionValueEvent,
 } from "framer-motion";
-
+/* eslint-disable */
 const cardData = [
   {
     heading: "Web design & development",
@@ -17,7 +17,6 @@ const cardData = [
     tags: ["Creative Web Design", "Web development", "E Commerce"],
     asset: "homepage.mp4",
   },
-
   {
     heading: "Digital Marketing",
     description:
@@ -38,6 +37,7 @@ const cardData = [
 
 function ServicesNew() {
   const targetRef = useRef(null);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   const { scrollY } = useScroll({
     target: targetRef,
@@ -48,15 +48,21 @@ function ServicesNew() {
     console.log(scrollY.get());
   });
 
-  const cardTimeLine = cardData.map((_, i) => {
-    const start = 1900 + i * window.innerHeight;
-    const end = 1900 + (i + 1) * window.innerHeight;
+  useEffect(() => {
+    // Set window height in state
+    if (typeof window !== "undefined") {
+      setWindowHeight(window.innerHeight);
+    }
+  }, []);
 
+  const cardTimeLine = cardData.map((_, i) => {
+    const start = 1900 + i * windowHeight;
+    const end = 1900 + (i + 1) * windowHeight;
     return [start, end];
   });
 
   const timeline = [[0, 1900], ...cardTimeLine];
-  /* eslint-disable */
+
   const animation = timeline.map((data) => ({
     scale: useTransform(scrollY, data, [1, 0.8]),
     opacity: useTransform(scrollY, data, [1, 0]),
@@ -65,7 +71,7 @@ function ServicesNew() {
   return (
     <section
       ref={targetRef}
-      className=" container  relative bg-white dark:bg-gray-950 py-4 md:py-8 lg:py-16 rounded-t-3xl px-4 md:px-8 lg:px-16 "
+      className="container relative bg-white dark:bg-gray-950 py-4 md:py-8 lg:py-16 rounded-t-3xl px-4 md:px-8 lg:px-16"
       id="services"
     >
       <motion.div
@@ -73,26 +79,24 @@ function ServicesNew() {
         style={{ scale: animation[0].scale, opacity: animation[0].opacity }}
       >
         <h2 className="w-full h-max">
-          Our <br /> <span className=" ml-10 md:ml-52">Services</span>
+          Our <br /> <span className="ml-10 md:ml-52">Services</span>
         </h2>
         <div className="rotate-90">
-          <span className="">&rarr;</span>
+          <span>&rarr;</span>
         </div>
       </motion.div>
 
       {cardData.map((card, i) => (
-        <>
-          <motion.div
-            key={i}
-            style={{
-              scale: animation[i + 1].scale,
-              opacity: animation[i + 1].opacity,
-            }}
-            className="h-dvh  sticky top-0 "
-          >
-            <ProjectCard card={card} />
-          </motion.div>
-        </>
+        <motion.div
+          key={i}
+          style={{
+            scale: animation[i + 1].scale,
+            opacity: animation[i + 1].opacity,
+          }}
+          className="h-dvh sticky top-0"
+        >
+          <ProjectCard card={card} />
+        </motion.div>
       ))}
     </section>
   );
