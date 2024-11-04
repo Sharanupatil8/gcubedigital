@@ -56,7 +56,7 @@ function ServicesNew() {
   });
 
   const timeline = [[0, 1900], ...cardTimeLine];
-
+  /* eslint-disable */
   const animation = timeline.map((data) => ({
     scale: useTransform(scrollY, data, [1, 0.8]),
     opacity: useTransform(scrollY, data, [1, 0]),
