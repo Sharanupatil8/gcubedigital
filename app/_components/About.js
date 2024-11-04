@@ -9,6 +9,7 @@ import React from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import AnimatedHeading from "./SecondaryHeading";
 
 const containerVariants = {
   visible: {
@@ -61,14 +62,30 @@ function About() {
         >
           01. Who We Are
         </motion.p>
-        <motion.h2
+        {/* <motion.h2
           whileInView={{ y: [50, 0], opacity: [0, 1] }}
           transition={{ duration: 0.7 }}
           className=" text-3xl md:text-5xl font-bold dark:text-gray-100 p-0 line-height-heading text-gray-900 tracking-tight pb-4   lg:text-7xl col-span-12 md:col-span-9 "
         >
           We build innovative digital solutions that make your brand stand out
           online
-        </motion.h2>
+        </motion.h2> */}
+        <AnimatedHeading
+          words={[
+            "We",
+            "build",
+            "innovative",
+            "digital",
+            "solutions",
+            "that",
+            "make",
+            "your",
+            "brand",
+            "stand",
+            "out",
+            "online",
+          ]}
+        />
       </div>
       <motion.div
         className="py-4 md:py-8 grid grid-cols-1 md:grid-cols-2 gap-x-0 gap-y-6 md:gap-y-8 lg:gap-y-0 lg:grid-cols-4 md:gap-x-8"

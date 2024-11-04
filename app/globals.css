@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
 .hero-bg,
 .testimonial-bg {
   background-image: url("/assets/light-gradient.jpg"); /* Default light mode background */
@@ -74,7 +78,7 @@
   content: "";
   width: 100%; /* Start with full width */
   height: 100vh; /* Full viewport height */
-  background-color: #000000;
+  background-image: url("/assets/dark-gradient.jpg");
   position: absolute;
   top: 0;
   right: 0;
@@ -91,4 +95,18 @@
     width: 0%; /* Shrink to 0% width */
     height: 100%;
   }
+}
+
+.dark .stroke-text {
+  color: transparent; /* Make the text color transparent */
+  -webkit-text-stroke: 1px #f5f5f5; /* Stroke width and color */
+  text-stroke: 1px #f5f5f5; /* Stroke width and color */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.stroke-text {
+  color: transparent; /* Make the text color transparent */
+  -webkit-text-stroke: 1px #333; /* Stroke width and color */
+  text-stroke: 1px #333; /* Stroke width and color */
+  white-space: nowrap; /* Prevent line breaks */
 }

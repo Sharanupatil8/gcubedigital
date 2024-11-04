@@ -58,7 +58,7 @@ function Contact() {
       });
   };
   return (
-    <footer className="bg-gray-950">
+    <footer className="bg-gray-950 " id="contact">
       <div className="rounded-md container max-w-6xl mx-auto px-6 md:px-12  py-12 xl:mt-12 grid  grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between overflow-hidden space">
         <motion.div
           className="order-2 md:order-1 bg-black-100 p-8 rounded-2xl"
@@ -154,7 +154,7 @@ function Contact() {
         className="  text-center py-4 mt-4 text-[16px] w-full leading-[30px]"
         variants={fadeIn("", "", 0.1, 1)}
       >
-        &copy; all rights reserved {new Date().getFullYear()} by DiGcube
+        &copy; all rights reserved {new Date().getFullYear()} by g cube digital
       </motion.p>
     </footer>
   );
