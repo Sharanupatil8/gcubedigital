@@ -29,7 +29,7 @@ const cardData = [
     heading: "Branding & UI Design",
     description:
       "It all starts with your brand. We use sound strategic thinking to create or elevate your brand identity, from your visuals to your voice.",
-    bgColor: "bg-sky-500",
+    bgColor: "bg-indigo-500",
     tags: ["Tone of voice", "Brand guidelines", "Visual identity"],
     asset: "homepage-3.mp4",
   },
@@ -71,7 +71,7 @@ function ServicesNew() {
   return (
     <section
       ref={targetRef}
-      className="container relative bg-white dark:bg-gray-950 py-4 md:py-8 lg:py-16 rounded-t-3xl px-4 md:px-8 lg:px-16"
+      className="container mx-auto relative bg-white dark:bg-gray-950 py-4 md:py-8 lg:py-16 rounded-t-3xl px-4 md:px-8 lg:px-16"
       id="services"
     >
       <motion.div
@@ -86,18 +86,28 @@ function ServicesNew() {
         </div>
       </motion.div>
 
-      {cardData.map((card, i) => (
-        <motion.div
-          key={i}
-          style={{
-            scale: animation[i + 1].scale,
-            opacity: animation[i + 1].opacity,
-          }}
-          className="h-dvh sticky top-0"
-        >
-          <ProjectCard card={card} />
-        </motion.div>
-      ))}
+      <div className="hidden md:block">
+        {cardData.map((card, i) => (
+          <motion.div
+            key={i}
+            style={{
+              scale: animation[i + 1].scale,
+              opacity: animation[i + 1].opacity,
+            }}
+            className="h-dvh sticky top-0"
+          >
+            <ProjectCard card={card} />
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="block md:hidden">
+        {cardData.map((card, i) => (
+          <motion.div key={i} className="h-dvh sticky top-0">
+            <ProjectCard card={card} />
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }

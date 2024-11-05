@@ -1,11 +1,11 @@
 function ProjectCard({ card }) {
   return (
-    <div className="h-full  mb-8  px-16 gap-12 py-16  rounded-3xl flex-col lg:flex-row shadow-xl flex w-full mx-auto bg-gray-50 dark:bg-gray-800">
+    <div className="h-full  mb-8  px-16 gap-12 py-16  rounded-3xl flex-col lg:flex-row shadow-xl  overflow-clip flex w-full mx-auto bg-gray-100 dark:bg-gray-800">
       <div className="flex-1  content-center ">
         <h1 className=" text-5xl md:text-5xl lg:text-8xl leading-[1] font-medium mt-8 mb-8">
           {card.heading}
         </h1>
-        <div className="flex gap-x-4 mb-8">
+        <div className="flex gap-4 mb-8 flex-wrap">
           {card.tags.map((tag, i) => (
             <div
               key={i}

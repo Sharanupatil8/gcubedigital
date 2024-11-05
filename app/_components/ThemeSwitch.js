@@ -37,7 +37,7 @@ export default function ThemeSwitch() {
       className="cursor-pointer"
     >
       {resolvedTheme === "dark" ? (
-        <FiSun size={24} className="text-sky-500" />
+        <FiSun size={24} className="text-indigo-500" />
       ) : (
         <FiMoon size={24} className="text-gray-800" />
       )}

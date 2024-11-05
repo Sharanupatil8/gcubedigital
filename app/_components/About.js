@@ -14,7 +14,7 @@ import AnimatedHeading from "./SecondaryHeading";
 const containerVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.3, // Adjust this for more or less stagger delay
+      staggerChildren: 0.2, // Adjust this for more or less stagger delay
     },
   },
 };
@@ -41,7 +41,7 @@ function About() {
   );
 
   return (
-    <section className="container max-w-7xl mx-auto px-4 md:px-8  my-8 md:my-12 lg:my-24 relative">
+    <section className="container overflow-x-hidden  max-w-7xl mx-auto px-4 md:px-8  my-8 md:my-12 lg:my-24 relative">
       <motion.div
         style={{ x: xAxis }}
         className="h-64 w-64 rounded-full absolute -z-10 "
@@ -94,7 +94,7 @@ function About() {
         whileInView="visible"
       >
         <motion.div
-          className="px-6 py-8 border border-sky-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-sky-800"
+          className="px-6 py-8 border border-indigo-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-indigo-800"
           variants={childVariants}
         >
           <HiCube className="h-12 w-12 mb-4 rounded-md text-rose-400 bg-gray-100 dark:bg-gray-800 p-2" />
@@ -106,10 +106,10 @@ function About() {
         </motion.div>
 
         <motion.div
-          className="px-6 py-8 border border-sky-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-sky-800"
+          className="px-6 py-8 border border-indigo-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-indigo-800"
           variants={childVariants}
         >
-          <HiChartBarSquare className="h-12 w-12 mb-4 rounded-md text-purple-400 bg-gray-100 dark:bg-gray-800 p-2" />
+          <HiChartBarSquare className="h-12 w-12 mb-4 rounded-md text-indigo-400 bg-gray-100 dark:bg-gray-800 p-2" />
           <h3 className="text-2xl mb-2">Strategy</h3>
           <p className="text-gray-400">
             Our tailored digital strategies ensure your business reaches the
@@ -118,7 +118,7 @@ function About() {
         </motion.div>
 
         <motion.div
-          className="px-6 py-8 border border-sky-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-sky-800"
+          className="px-6 py-8 border border-indigo-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-indigo-800"
           variants={childVariants}
         >
           <HiCog8Tooth className="h-12 w-12 mb-4 rounded-md text-emerald-400 bg-gray-100 dark:bg-gray-800 p-2" />
@@ -130,7 +130,7 @@ function About() {
         </motion.div>
 
         <motion.div
-          className="px-6 py-8 border border-sky-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-sky-800"
+          className="px-6 py-8 border border-indigo-900 rounded-md hover:-translate-y-1 duration-100 ease-linear hover:shadow-sm hover:shadow-indigo-800"
           variants={childVariants}
         >
           <HiMiniChatBubbleBottomCenterText className="h-12 w-12 mb-4 rounded-md text-indigo-400 bg-gray-100 dark:bg-gray-800 p-2" />

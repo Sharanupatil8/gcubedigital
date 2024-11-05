@@ -27,19 +27,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html class="scroll-smooth" lang="en" suppressHydrationWarning>
+    <html className="scroll-smooth" lang="en" suppressHydrationWarning>
       <body
         className={`${jakarta.className} ${dmSans.className} dark:bg-gray-900 bg-gray-50 overflow-x-hidden`}
       >
         <AnimatedCursor
-          innerSize={12}
-          outerSize={48}
-          color="2, 132, 233" // White color for cursor
-          outerAlpha={0.5}
-          innerScale={0.3}
-          outerScale={2}
+          innerSize={12} // Inner cursor size
+          outerSize={48} // Outer cursor size
+          color="14 ,165, 233" // RGB values for white color
+          outerAlpha={0.1} // Adjust outer alpha for lighter transparency
+          innerScale={0.3} // Scale of the inner cursor on hover
+          outerScale={2} // Scale of the outer cursor on hover
           style={{
-            mixBlendMode: "difference", // Apply difference blend mode
+            mixBlendMode: "difference", // Difference blend mode for contrast
           }}
           clickables={[
             "a",
@@ -55,6 +55,7 @@ export default function RootLayout({ children }) {
             ".link",
           ]}
         />
+
         <ThemeProvider>
           <>{children}</>
         </ThemeProvider>

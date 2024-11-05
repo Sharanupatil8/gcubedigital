@@ -13,8 +13,8 @@ import Testimonial from "./_components/Testimonial";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <header className="relative w-full pt-6 px-5 lg:px-0 md:pt-6 hero-bg h-screen ">
+      <header className="relative w-full pt-6 px-5  lg:px-0 md:pt-6 hero-bg  h-screen ">
+        <Navbar />
         <Hero />
       </header>
       <main>

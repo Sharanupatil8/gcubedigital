@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="container sticky top-10 max-w-4xl  mx-auto z-20 h-[60px] px-4 md:px-8 py-4 md:py-8 backdrop-blur-3xl bg-transparent flex items-center justify-between rounded-md border-[0.5px] border-sky-900">
+    <nav className="container sticky top-10 max-w-6xl  mx-auto z-20 h-[60px] px-4 md:px-8 py-4 md:py-8 backdrop-blur-3xl bg-transparent flex items-center justify-between rounded-md border-[0.5px] border-indigo-900">
       <Link href="/">
         <h3 className=" dark:text-white text-gray-900 text-lg tracking-wider">
           G Cube Digital
@@ -22,7 +22,7 @@ function Navbar() {
         <li className="text-lg group dark:text-gray-300">
           <Link
             href="#services"
-            className="group-hover:border-b border-sky-400 ease-out duration-75"
+            className="group-hover:border-b border-indigo-400 ease-out duration-75"
           >
             Services
           </Link>
@@ -30,7 +30,7 @@ function Navbar() {
         <li className="text-lg group dark:text-gray-300">
           <Link
             href="#portfolio"
-            className="group-hover:border-b border-sky-400 ease-out duration-75"
+            className="group-hover:border-b border-indigo-400 ease-out duration-75"
           >
             Portfolio
           </Link>
@@ -38,7 +38,7 @@ function Navbar() {
         <li className="text-lg group">
           <Link
             href="#contact"
-            className="group-hover:border-b bg-sky-600 px-4 py-2 text-gray-100 border-sky-400 ease-out duration-75"
+            className="group-hover:border-b bg-indigo-600 px-4 py-2 text-gray-100 border-indigo-400 ease-out duration-75"
           >
             Contact
           </Link>
@@ -48,7 +48,7 @@ function Navbar() {
         </li>
       </ul>
       <button
-        className="block lg:hidden hover:bg-sky-400 p-2 rounded-md ease-linear duration-75"
+        className="block lg:hidden hover:bg-indigo-400 p-2 rounded-md ease-linear duration-75"
         onClick={toggleMobileMenu}
       >
         <HiBars3 className="h-8 w-8" />
@@ -69,7 +69,7 @@ function Navbar() {
           <li className="text-lg">
             <Link
               href="#contact"
-              className="bg-sky-600 px-4 py-2 text-gray-100 rounded"
+              className="bg-indigo-600 px-4 py-2 text-gray-100 rounded"
               onClick={toggleMobileMenu}
             >
               Contact

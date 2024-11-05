@@ -26,7 +26,7 @@ const Portfolio = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: index * 0.2, // Stagger effect based on index
+        delay: index * 0.1, // Stagger effect based on index
       },
     }),
   };
@@ -69,7 +69,7 @@ const Portfolio = () => {
               custom={i} // Pass the index to the variants for stagger
             >
               <Tilt options={defaultOptions}>
-                <div className="relative rounded-xl w-auto group border border-sky-200 dark:border-sky-800 backdrop-blur-3xl bg-opacity-50 dark:bg-gray-800 p-4 overflow-hidden bg-gray-100">
+                <div className="relative rounded-xl w-auto group border border-indigo-200 dark:border-indigo-800 backdrop-blur-3xl bg-opacity-50 dark:bg-gray-800 p-4 overflow-hidden bg-gray-100">
                   <Image
                     src={project.image}
                     alt={project.name}
@@ -86,7 +86,7 @@ const Portfolio = () => {
                     href={project.source_code_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-2 px-3 hover:cursor rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-sky-500 duration-75 ease-linear mt-2 inline-block"
+                    className="py-2 px-3 hover:cursor rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-indigo-500 duration-75 ease-linear mt-2 inline-block"
                   >
                     View Project &rarr;
                   </a>

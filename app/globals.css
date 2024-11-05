@@ -9,7 +9,7 @@ body {
 .hero-bg,
 .testimonial-bg {
   background-image: url("/assets/light-gradient.jpg"); /* Default light mode background */
-  background-position: top center;
+  background-position: center, bottom;
   background-repeat: no-repeat;
   position: relative; /* Make sure the parent has a position set */
   z-index: 1;
@@ -46,9 +46,10 @@ body {
 
 .dark .hero-bg::before {
   opacity: 0.6;
+  z-index: -1;
 }
 .btn-primary {
-  @apply bg-sky-600 dark:text-gray-100 text-gray-100 font-medium px-4 py-3 text-xl hover:scale-105 hover:shadow-green-500 drop-shadow-lg ease-linear duration-100;
+  @apply bg-indigo-600 dark:text-gray-100 text-gray-100 font-medium px-4 py-3 text-xl hover:scale-105 hover:shadow-green-500 drop-shadow-lg ease-linear duration-100;
 }
 
 /* Custom utility class for balanced text wrapping */
@@ -109,4 +110,10 @@ body {
   -webkit-text-stroke: 1px #333; /* Stroke width and color */
   text-stroke: 1px #333; /* Stroke width and color */
   white-space: nowrap; /* Prevent line breaks */
+}
+
+.border-gradient {
+  border-image: linear-gradient(to right, #4f46e5, #6b7280) 1; /* Adjust colors as needed */
+  border-width: 2px; /* Adjust the thickness as needed */
+  border-style: solid;
 }

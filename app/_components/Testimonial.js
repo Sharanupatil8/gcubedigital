@@ -4,7 +4,7 @@ import TestimonialSlider from "./TestimonialSlider";
 import { motion } from "framer-motion";
 function Testimonial() {
   return (
-    <motion.div className="container  mx-auto  testimonial-bg border-2 border-sky-900  max-w-7xl   px-6 py-6 md:py-12 rounded-3xl md:px-12 lg:px-16  my-8 md:my-12 lg:my-24">
+    <motion.div className="container  mx-auto  testimonial-bg border-2 border-indigo-900  max-w-7xl   px-6 py-6 md:py-12 rounded-3xl md:px-12 lg:px-16  my-8 md:my-12 lg:my-24">
       <div className="grid  items-center grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-8 lg:gap-x-12 gap-y-12 md:gap-y-0">
         <motion.div
           whileInView={{ x: [-100, 0], opacity: [0, 50, 100] }}

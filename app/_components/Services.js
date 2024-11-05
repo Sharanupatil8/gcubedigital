@@ -60,7 +60,7 @@ function Services() {
               key={service.i}
               whileInView={{ x: [-100, 0], opacity: [0, 100] }}
               transition={{ duration: 0.3, type: "tween", delay: i * 0.3 }}
-              className="grid hover px-4 duration-100 ease-linear group hover:bg-gray-800 hover:text-gray-50 hover:scale-105 grid-cols-12 items-center gap-x-4 md:gap-x-8 justify-between w-full border-t border-sky-900 py-3 md:py-6 lg:py-12"
+              className="grid hover px-4 duration-100 ease-linear group hover:bg-gray-800 hover:text-gray-50 hover:scale-105 grid-cols-12 items-center gap-x-4 md:gap-x-8 justify-between w-full border-t border-indigo-900 py-3 md:py-6 lg:py-12"
             >
               <div className="text-2xl font-bold col-span-12 lg:col-span-1">
                 {service.id}
@@ -83,7 +83,7 @@ function Services() {
                 {service.description}
               </div>
               <div className="col-span-12 md:col-span-2">
-                <button className="px-6 py-4 mt-3 mb-4 md:mb-0 md:mt-0 border border-sky-800 rounded-full hover:bg-sky-500 transition duration-200">
+                <button className="px-6 py-4 mt-3 mb-4 md:mb-0 md:mt-0 border border-indigo-800 rounded-full hover:bg-indigo-500 transition duration-200">
                   Let&apos;s Talk &rarr;
                 </button>
               </div>

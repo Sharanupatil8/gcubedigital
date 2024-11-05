@@ -1,58 +1,117 @@
-"use client";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import React from "react";
+import { HiArrowUpRight, HiStar } from "react-icons/hi2";
 
-const titleText = "Experience Our Expert Agency Services";
-
-const Hero = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // Animate once when in view
-
-  const { scrollY } = useScroll(); // Track scroll position
-  const rotation = useTransform(scrollY, [0, 600], [0, 600]); // Transform scroll position to rotation
-
-  const letterAnimation = {
-    hidden: { opacity: 0, y: 100, skewY: 7 },
-    visible: { opacity: 1, y: 0, skewY: 0 },
-  };
-
-  const createLetterAnimation = (letter, index) => {
-    return (
-      <motion.span
-        key={index}
-        variants={letterAnimation}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.05 }}
-        className="inline-block"
-      >
-        {letter === " " ? "\u00A0" : letter}
-      </motion.span>
-    );
-  };
-
+function Hero() {
   return (
-    <section className="h-full relative z-0">
-      <div
-        ref={ref}
-        className="h-full max-w-6xl mx-auto px-4 md:px-8 flex text-center flex-col items-center justify-center relative z-10"
-      >
-        <h1 className="text-5xl md:text-6xl dark:text-white tracking-[-0.3px] text-gray-900 font-bold xl:text-8xl mt-0 md:mt-4">
-          {titleText
-            .split("")
-            .map((char, index) => createLetterAnimation(char, index))}
-        </h1>
-        <p className="w-[80%] text-lg xl:text-2xl mt-6 md:mt-8 dark:text-gray-400">
-          We offer expert services in website development, SEO, UX/UI design,
-          and graphic design to help elevate your brand.
-        </p>
-        <a href="#contact" className="btn-primary mt-8">
-          Start Your Project Today
-        </a>
+    <section className="relative px-4 w-full overflow-hidden ">
+      <div className="max-w-6xl  z-40 md:py-12 lg:pt-20  py-16 mx-auto   md:px-6 lg:px-0">
+        <div className="w-full lg:w-4/5 me-auto">
+          <h1 className="text-5xl md:text-6xl text-center md:text-start lg:text-8xl  md:leading-[92px] font-bold text-gray-900 dark:text-white">
+            We Develop
+            <span className="ml-4 hidden md:inline-block h-12 w-12 mb-4 rotate-12">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#818cf8" />
+                    <stop offset="100%" stopColor="#4f46e5" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M12 2L14 9.5L22 12L14 14.5L12 22L10 14.5L2 12L10 9.5Z"
+                  fill="url(#gradient)"
+                />
+              </svg>
+            </span>
+            <br className="hidden lg:block" />{" "}
+            <span className="bg-gradient-to-r from-indigo-500 to-indigo-700 dark:from-indigo-300 dark:to-indigo-500 text-transparent bg-clip-text">
+              amazing
+            </span>{" "}
+            websites <br /> for your business
+            <span className="bg-gradient-to-r from-indigo-300 to-indigo-500 text-transparent bg-clip-text">
+              .
+            </span>
+          </h1>
+          <p className="text-center md:text-start text-gray-700 dark:text-gray-400 mt-6 mb-4 md:mt-8 text-lg ">
+            Transform your online presence with our expert web design &
+            development and digital marketing solutions.{" "}
+            <span className="hidden md:block"></span>{" "}
+            <span className="hidden md:block">
+              We help businesses like yours reach more customers, drive real
+              engagement, and achieve measurable growth.
+            </span>
+          </p>
+          <div className="flex flex-col gap-y-6 md:gap-y-0 md:flex-row mt-8  md:mt-10 items-center  gap-x-4 md:gap-x-8">
+            <a
+              href="#contact"
+              className="  border  block px-4 text-lg py-3 rounded-md border-indigo-500"
+            >
+              Let&apos;s Get Started{" "}
+              <HiArrowUpRight className="text-lg inline-block " />
+            </a>
+            <div className="flex self-center">
+              <div className="">
+                <Image
+                  src="/assets/avatars/image-1.jpg"
+                  width="40"
+                  height="40"
+                  alt="user images"
+                  className="h-12 w-12  rounded-full border-gray-200 border-4"
+                />
+              </div>
+              <div className="-ms-4">
+                <Image
+                  src="/assets/avatars/image-2.jpg"
+                  width="40"
+                  height="40"
+                  alt="user images"
+                  className="h-12 w-12  rounded-full border-gray-200 border-4"
+                />
+              </div>
+              <div className="-ms-4">
+                <Image
+                  src="/assets/avatars/image-3.jpg"
+                  width="40"
+                  height="40"
+                  alt="user images"
+                  className="h-12 w-12  rounded-full border-gray-200 border-4"
+                />
+              </div>
+              <div className="-ms-4">
+                <Image
+                  src="/assets/avatars/image-4.jpg"
+                  width="40"
+                  height="40"
+                  alt="user images"
+                  className="h-12 w-12  rounded-full border-gray-200 border-4"
+                />
+              </div>
+              <div className="-ms-4">
+                <Image
+                  src="/assets/avatars/image-5.jpg"
+                  width="40"
+                  height="40"
+                  alt="user images"
+                  className="h-12 w-12  rounded-full border-gray-200 border-4"
+                />
+              </div>
+              <div className="flex flex-col ms-3 justify-start">
+                <p className=" text-gray-700 dark:text-gray-300 text-xl  pb-0 mb-0">
+                  20+
+                </p>
+                <p className="text-sm mt-0 pt-0 text-gray-600 dark:text-gray-400">
+                  Happy Clients
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-1/2 -right-[200px] lg:-right-[200px] -translate-y-1/2">
+        <div className="bg-gradient-to-r hidden md:block from-indigo-400 blur-3xl  opacity-60 to-indigo-600 h-[300px] w-[300px] rounded-full"></div>
       </div>
     </section>
   );
-};
+}
 
 export default Hero;
