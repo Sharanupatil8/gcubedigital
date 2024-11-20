@@ -1,6 +1,7 @@
 import About from "./_components/About";
 import Contact from "./_components/Contact";
 import Hero from "./_components/Hero";
+import MovingText1 from "./_components/MovingText1";
 import AnimatedText from "./_components/MovingText";
 import Navbar from "./_components/Navbar";
 import Portfolio from "./_components/Portfolio";
@@ -22,9 +23,12 @@ export default function Home() {
         <About />
         {/* <Services /> */}
         {/* <PortfolioScrollable /> */}
-        <ServicesNew />
-        <Testimonial />
+        <Services />
+
         <Portfolio />
+        <MovingText1 />
+        <Testimonial />
+
         <Contact />
       </main>
     </>

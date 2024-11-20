@@ -32,10 +32,10 @@ const Portfolio = () => {
   };
 
   return (
-    <section>
+    <section className="bg-gray-100">
       <motion.div
         id="portfolio"
-        className="container max-w-6xl mx-auto px-4 md:px-12 lg:px-16 my-8 md:my-12 py-8 md:py-16 lg:my-24"
+        className="container max-w-8xl mx-auto px-4 md:px-12 lg:px-16 my-8 md:my-12 py-8 md:py-16 lg:my-24"
       >
         {/* <motion.h2
         whileInView={{ y: [100, 0], opacity: [0, 50, 100] }}
@@ -58,7 +58,7 @@ const Portfolio = () => {
           innovative design.
         </motion.p>
 
-        <div className="grid grid-cols-1 gap-y-6 pt-8 md:pt-12 md:gap-y-12 gap-x-0 md:gap-x-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-y-6 pt-8 md:pt-12 md:gap-y-12 gap-x-0 md:gap-x-12 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -69,7 +69,7 @@ const Portfolio = () => {
               custom={i} // Pass the index to the variants for stagger
             >
               <Tilt options={defaultOptions}>
-                <div className="relative rounded-xl w-auto group border border-indigo-200 dark:border-indigo-800 backdrop-blur-3xl bg-opacity-50 dark:bg-gray-800 p-4 overflow-hidden bg-gray-100">
+                <div className="relative rounded-xl w-auto group border border-indigo-200 dark:border-indigo-800 backdrop-blur-3xl bg-opacity-50 dark:bg-gray-800 p-4 overflow-hidden bg-gray-00">
                   <Image
                     src={project.image}
                     alt={project.name}
@@ -86,7 +86,7 @@ const Portfolio = () => {
                     href={project.source_code_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-2 px-3 hover:cursor rounded-md bg-gray-200 dark:bg-gray-900 hover:bg-indigo-500 duration-75 ease-linear mt-2 inline-block"
+                    className="py-2 px-3 hover:cursor bg-indigo-500 rounded-md text-white dark:bg-gray-900 hover:bg-indigo-500 duration-75 ease-linear mt-2 inline-block"
                   >
                     View Project &rarr;
                   </a>

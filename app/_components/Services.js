@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import AnimatedHeading from "./SecondaryHeading";
 function Services() {
   return (
-    <section className="container max-w-8xl mx-auto px-4 md:px-12 my-8 md:my-12 lg:my-24">
-      <div className="bg-pattern bg-gray-100 dark:bg-gray-950 py-4 md:py-8 lg:py-16 rounded-t-3xl px-4 md:px-8 lg:px-12">
+    <section className="  mx-auto px-4 md:px-12 my-8 md:my-12 lg:my-24 ">
+      <div className="bg-pattern border border-gray-500 gradient-bg bg-gray-100 dark:bg-gray-950 py-4 md:py-8 lg:py-16 rounded-t-3xl px-4 md:px-8 lg:px-12">
         {/* <motion.h2
           whileInView={{ y: [100, 50, 0], skewX: [20, 0] }}
           transition={{ duration: 0.3, type: "tween" }}

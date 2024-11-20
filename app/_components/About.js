@@ -99,7 +99,7 @@ function About() {
         >
           <HiCube className="h-12 w-12 mb-4 rounded-md text-rose-400 bg-gray-100 dark:bg-gray-800 p-2" />
           <h3 className="text-2xl mb-2">Creativity</h3>
-          <p className="text-gray-400">
+          <p className="text-gray-600  dark:text-gray-400">
             We craft custom designs that reflect your brand’s personality and
             leave a lasting impression.
           </p>
@@ -111,7 +111,7 @@ function About() {
         >
           <HiChartBarSquare className="h-12 w-12 mb-4 rounded-md text-indigo-400 bg-gray-100 dark:bg-gray-800 p-2" />
           <h3 className="text-2xl mb-2">Strategy</h3>
-          <p className="text-gray-400">
+          <p className="text-gray-600  dark:text-gray-400">
             Our tailored digital strategies ensure your business reaches the
             right audience at the right time.
           </p>
@@ -123,7 +123,7 @@ function About() {
         >
           <HiCog8Tooth className="h-12 w-12 mb-4 rounded-md text-emerald-400 bg-gray-100 dark:bg-gray-800 p-2" />
           <h3 className="text-2xl mb-2">Optimization</h3>
-          <p className="text-gray-400">
+          <p className="text-gray-600  dark:text-gray-400">
             We optimize websites for fast performance and top search rankings,
             ensuring your brand shines online.
           </p>
@@ -135,7 +135,7 @@ function About() {
         >
           <HiMiniChatBubbleBottomCenterText className="h-12 w-12 mb-4 rounded-md text-indigo-400 bg-gray-100 dark:bg-gray-800 p-2" />
           <h3 className="text-2xl mb-2">Support</h3>
-          <p className="text-gray-400">
+          <p className="text-gray-600  dark:text-gray-400">
             We provide ongoing maintenance and support to keep your digital
             presence running smoothly.
           </p>

@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="container sticky top-10 max-w-6xl  mx-auto z-20 h-[60px] px-4 md:px-8 py-4 md:py-8 backdrop-blur-3xl bg-transparent flex items-center justify-between rounded-md border-[0.5px] border-indigo-900">
+    <nav className="container sticky top-10 max-w-7xl  mx-auto z-20 h-[60px] px-4 md:px-8 py-4 md:py-8 backdrop-blur-3xl bg-transparent flex items-center justify-between rounded-md border-[0.5px] border-indigo-900">
       <Link href="/">
         <h3 className=" dark:text-white text-gray-900 text-lg tracking-wider">
           G Cube Digital
@@ -43,9 +43,9 @@ function Navbar() {
             Contact
           </Link>
         </li>
-        <li>
+        {/* <li>
           <ThemeSwitch />
-        </li>
+        </li> */}
       </ul>
       <button
         className="block lg:hidden hover:bg-indigo-400 p-2 rounded-md ease-linear duration-75"

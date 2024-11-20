@@ -4,9 +4,9 @@ import { HiArrowUpRight, HiStar } from "react-icons/hi2";
 
 function Hero() {
   return (
-    <section className="relative px-4 w-full overflow-hidden ">
-      <div className="max-w-6xl  z-40 md:py-12 lg:pt-20  py-16 mx-auto   md:px-6 lg:px-0">
-        <div className="w-full lg:w-4/5 me-auto">
+    <section className="relative h-full px-4 w-full overflow-hidden ">
+      <div className="max-w-7xl h-full    pb-16   z-40 mx-auto   md:px-6 lg:px-0">
+        <div className="w-full flex flex-col justify-center h-full  lg:w-4/5 lg:me-auto">
           <h1 className="text-5xl md:text-6xl text-center md:text-start lg:text-8xl  md:leading-[92px] font-bold text-gray-900 dark:text-white">
             We Develop
             <span className="ml-4 hidden md:inline-block h-12 w-12 mb-4 rotate-12">
@@ -44,7 +44,7 @@ function Hero() {
           <div className="flex flex-col gap-y-6 md:gap-y-0 md:flex-row mt-8  md:mt-10 items-center  gap-x-4 md:gap-x-8">
             <a
               href="#contact"
-              className="  border  block px-4 text-lg py-3 rounded-md border-indigo-500"
+              className="bg-indigo-500 text-white  border  block px-4 text-lg py-3 rounded-md border-indigo-500"
             >
               Let&apos;s Get Started{" "}
               <HiArrowUpRight className="text-lg inline-block " />

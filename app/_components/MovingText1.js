@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const MovingText = () => {
   const texts = [
-    "Web Development,",
+    "Let's Talk,",
     "UX UI Design,",
     "Digital Marketing,",
     "Web Development,",
@@ -16,7 +16,7 @@ const MovingText = () => {
   const combinedText = texts.join("    "); // Adjust spacing as needed
 
   return (
-    <div className="overflow-hidden bg-gray-800 text-white dark:bg-gray-950 py-5 lg:py-10 white-space-nowrap">
+    <div className="overflow-hidden bg-gray-800 text-white dark:bg-gray-950 mb-0 py-5 lg:py-10 white-space-nowrap">
       <motion.div
         className="flex"
         animate={{ x: ["0%", "-100%"] }} // Moves from right to left
