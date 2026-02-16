@@ -15,7 +15,7 @@ function Navbar() {
     <nav className="container sticky top-10 max-w-7xl  mx-auto z-20 h-[60px] px-4 md:px-8 py-4 md:py-8 backdrop-blur-3xl bg-transparent flex items-center justify-between rounded-md border-[0.5px] border-indigo-900">
       <Link href="/">
         <h3 className=" dark:text-white text-gray-900 text-lg tracking-wider">
-          G Cube Digital
+         SharpXstudios
         </h3>
       </Link>
       <ul className="hidden lg:flex items-center gap-x-8">
