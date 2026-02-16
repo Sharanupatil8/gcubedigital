@@ -17,11 +17,11 @@ const dmSans = DM_Sans({
 
 export const metadata = {
   title:
-    "G Cube Digital | Best Web Development & Digital Marketing Agency in Bangalore",
+    "SharpXstudios | Best Web Development & Digital Marketing Agency in Bangalore",
   description:
-    "G Cube Digital is the leading web development and digital marketing agency in RR Nagar, Bangalore. We specialize in creating innovative websites and effective marketing strategies to help your business grow. Contact us today!",
+    "SharpXstudios is the leading web development and digital marketing agency in RR Nagar, Bangalore. We specialize in creating innovative websites and effective marketing strategies to help your business grow. Contact us today!",
   keywords:
-    "G Cube Digital, web development agency, digital marketing agency, RR Nagar, Bangalore, best web development, digital marketing, SEO, social media marketing, branding, responsive web design, custom websites, e-commerce development",
+    "SharpXstudios, web development agency, digital marketing agency, RR Nagar, Bangalore, best web development, digital marketing, SEO, social media marketing, branding, responsive web design, custom websites, e-commerce development",
   author: "Sharan P",
 };
 
