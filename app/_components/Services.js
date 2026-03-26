@@ -89,7 +89,7 @@ function Services() {
               <div className="col-span-12 md:col-span-5 group-hover:text-gray-100  text-gray-700 dark:text-gray-200">
                 {service.description}
               </div>
-              <div className="col-span-12 md:col-span-2 mt-6">
+              <div className="col-span-12 md:col-span-2 mt-6 mb-8">
                 <a
                   href="#contact"
                   className="px-6 py-4 mt-3 mb-4 md:mb-0 md:mt-0 border border-indigo-800 rounded-full hover:bg-indigo-500 transition duration-200"
