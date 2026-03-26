@@ -41,7 +41,7 @@ function About() {
   );
 
   return (
-    <section className="container overflow-x-hidden  max-w-7xl mx-auto px-4 md:px-8  my-8 md:my-12 lg:my-24 relative">
+    <section id="about" className="container overflow-x-hidden  max-w-7xl mx-auto px-4 md:px-8  my-8 md:my-12 lg:my-24 relative">
       <motion.div
         style={{ x: xAxis }}
         className="h-64 w-64 rounded-full absolute -z-10 "
