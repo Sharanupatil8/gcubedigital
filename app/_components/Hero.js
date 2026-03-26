@@ -68,10 +68,13 @@ function Hero() {
       ref={heroRef}
       className="relative h-full px-2 md:px-4 w-full overflow-hidden "
     >
-      <div className="max-w-7xl h-full pb-16 z-40 mx-auto md:px-6 -mt-8 md:mt-0 lg:px-0">
+      <div className="max-w-7xl h-full pb-16 z-40 mx-auto md:px-6 -mt-11 md:mt-0 lg:px-0">
         <div className="w-full flex flex-col  text-center md:text-start justify-center h-full lg:w-4/5 lg:me-auto">
-          <div ref={badgeRef} className="flex items-center md:justify-start gap-3 mb-8 -mt-4 md:mt-0">
-            <span className="h-px w-7 bg-indigo-500 shrink-0" />
+          <div
+            ref={badgeRef}
+            className="flex items-center justify-center md:justify-start gap-3 mb-8  md:mt-0"
+          >
+            <span className="h-px w-7 hidden md:inline-block bg-indigo-500 shrink-0" />
             <span className="text-[11px] tracking-[0.28em] uppercase text-indigo-500 font-semibold">
               Web Development · Digital Marketing · AI Automation
             </span>
@@ -79,7 +82,7 @@ function Hero() {
 
           <h1
             ref={headingRef}
-            className="text-5xl md:text-6xl trac text-center md:text-start lg:text-8xl md:leading-[92px] font-bold text-gray-900 dark:text-white"
+            className="text-5xl md:text-6xl trac text-center md:text-start lg:text-8xl md:leading-[92px] font-black text-gray-900 dark:text-white"
           >
             We help
             <span className="ml-4 hidden md:inline-block h-12 w-12 mb-4 rotate-12">
