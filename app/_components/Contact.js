@@ -65,7 +65,7 @@ function Contact() {
           whileInView={{ x: [100, 0], opacity: [0, 100] }}
           transition={{ duration: 0.3, type: "tween" }}
         >
-          <p className={`${style.sectionSubText}`}>Let&apos;s Work Together</p>
+          <p className={`${style.sectionSubText} text-white/70`}>Let&apos;s Work Together</p>
           <h3 className={`${style.sectionHeadText}`}>Contact.</h3>
           <form
             ref={formRef}
