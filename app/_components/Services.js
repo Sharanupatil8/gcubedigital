@@ -35,28 +35,28 @@ function Services() {
               image: "/assets/web-development.webp",
             },
             {
-              id: "07",
+              id: "02",
               title: "AI Automation Agents",
               description:
                 "Intelligent, scalable AI agents designed to automate business processes, improve efficiency, and streamline operations using cutting-edge technologies.",
               image: "/assets/ai.webp",
             },
             {
-              id: "02",
+              id: "03",
               title: "Digital Marketing",
               description:
                 "Targeted strategies to boost your online presence and engage your audience.",
               image: "/assets/digital-marketing.webp",
             },
             {
-              id: "03",
+              id: "04",
               title: "SEO Marketing",
               description:
                 "Optimizations to improve search rankings and drive organic traffic.",
               image: "/assets/seo.webp",
             },
             {
-              id: "04",
+              id: "05",
               title: "Graphic Design",
               description:
                 "Compelling visuals for branding and marketing that elevate your identity.",
