@@ -70,7 +70,7 @@ function Hero() {
     >
       <div className="max-w-7xl h-full pb-16 z-40 mx-auto md:px-6 lg:px-0">
         <div className="w-full flex flex-col justify-center h-full lg:w-4/5 lg:me-auto">
-          <div ref={badgeRef} className="flex items-center gap-3 mb-8">
+          <div ref={badgeRef} className="flex items-center gap-3 mb-8 -mt-2 md:mt-0">
             <span className="h-px w-7 bg-indigo-500 shrink-0" />
             <span className="text-[11px] tracking-[0.28em] uppercase text-indigo-500 font-semibold">
               Web Development · Digital Marketing · AI Automation
